@@ -1,0 +1,25 @@
+import registroAbatidos.*
+
+test "El registro de abatidos funciona correctamente" {
+
+	assert.that(registroAbatidos.algunDiaAbatio(49))
+	assert.notThat(registroAbatidos.algunDiaAbatio(52))
+	assert.equals(62, registroAbatidos.maximoValorDeAbatidos())
+	assert.equals([18, 62], registroAbatidos.valoresDeAbatidosPares())
+	assert.that(registroAbatidos.abatidosEsAcotada(10,100))
+	assert.notThat(registroAbatidos.abatidosEsAcotada(20,100))
+	assert.equals([48, 23, 54, 67, 38, 44], registroAbatidos.abatidosSumando(5))
+	assert.equals(244, registroAbatidos.totalAbatidos())
+	assert.equals(39, registroAbatidos.ultimoValorDeAbatidos())
+	assert.equals(2, registroAbatidos.cantidadAbatidosMayorALaPrimera())
+	assert.that(registroAbatidos.algunDiaAbatioMasDe(50))
+	assert.notThat(registroAbatidos.todosLosDiasAbatioMasDe(30))
+	assert.notThat(registroAbatidos.esCrack())
+	assert.equals(6, registroAbatidos.cantidadDeDiasRegistrados())
+	assert.notThat(registroAbatidos.estaVacioElRegistro())
+	assert.equals(43, registroAbatidos.primerValorDeAbatidos())
+	assert.equals(18, registroAbatidos.cantidadDeAbatidosElDia(20230101))
+	assert.equals(39, registroAbatidos.ultimoValorDeAbatidosConSize())
+	assert.equals([20221231, 20230105, 20230106], registroAbatidos.diasConAbatidosSuperioresA(39))
+
+}
